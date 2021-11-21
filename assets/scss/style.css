@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0f1424;
+  background-color: whitesmoke;
+  font-family: "Rubik", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 60px 20px;
+  }
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(190px, 230px) 1fr 1fr 1fr;
+      grid-template-columns: minmax(190px, 230px) 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    -ms-grid-columns: minmax(190px, 230px) 1fr 1fr;
+        grid-template-columns: minmax(190px, 230px) 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.grid__user {
+  grid-row: span 2;
+  background-color: #1c1f4a;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid__user {
+    grid-row: span 3;
+  }
+}
+
+.grid__user__box {
+  padding: 20px 28px 50px 28px;
+  background-color: #5847eb;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.grid__user__box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+
+.grid__user__box .grid__user__text {
+  margin-top: 25px;
+}
+
+.grid__user__box .grid__user__text span {
+  color: #bdc1ff;
+  font-size: 0.75em;
+}
+
+.grid__user__box .grid__user__text p {
+  max-width: 150px;
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.grid__link {
+  padding: 20px 28px;
+}
+
+.grid__link a {
+  display: block;
+  color: #6f76c8;
+}
+
+.grid__link a + a {
+  margin-top: 15px;
+}
+
+.grid__link a.active {
+  color: #ffffff;
+}
+
+.grid__itens {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.grid__itens > img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 105px;
+  top: -7px;
+}
+
+.grid__itens .grid__itens__content {
+  margin-top: 25px;
+  padding: 15px 20px 25px 20px;
+  display: block;
+  position: relative;
+  bottom: 0;
+  background-color: #1c1f4a;
+  border-radius: 14px;
+}
+
+.grid__itens .grid__itens__content .flex {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grid__itens .grid__itens__content .flex p {
+  color: #ffffff;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.grid__itens .grid__itens__content .flex img {
+  cursor: pointer;
+}
+
+.grid__itens .grid__itens__content .big--text {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.grid__itens .grid__itens__content .small--text {
+  color: #bdc1ff;
+  font-size: 0.625em;
+}
+
+.grid__itens .grid__itens__content:hover {
+  background-color: #6f76c8;
+  cursor: pointer;
+}
+
+.grid__content--orange {
+  background-color: #ff8c66;
+}
+
+.grid__content--blue {
+  background-color: #56c2e6;
+}
+
+.grid__content--red {
+  background-color: #ff5c7c;
+}
+
+.grid__content--green {
+  background-color: #4acf81;
+}
+
+.grid__content--purple {
+  background-color: #7536d3;
+}
+
+.grid__content--yellow {
+  background-color: #f1c65b;
+}
+/*# sourceMappingURL=style.css.map */
