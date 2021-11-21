@@ -5,7 +5,13 @@
 }
 
 @mixin mobile {
-   @media screen and (max-width: 480px) {
+   @media screen and (max-width: 576px) {
+      @content;
+   }
+}
+
+@mixin mobile-small {
+   @media screen and (max-width: 320px) {
       @content;
    }
 }

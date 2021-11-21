@@ -10,15 +10,19 @@ a{
 
 body{
    min-height: 100vh;
+   margin: 5px 10px;
    display: flex;
    align-items: center;
    justify-content: center;
-   
+
    background-color: $Very-dark-blue;
    background-color: whitesmoke;
    font-family: $font-family-rubik;
 
    @include mobile{
-      margin: 60px 20px;
+      margin: 40px 20px;
+   }
+   @include mobile-small{
+      margin: 30px 12px;
    }
 }
