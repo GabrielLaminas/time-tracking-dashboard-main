@@ -225,6 +225,11 @@ body {
   border-radius: 14px;
 }
 
+.grid__itens .grid__itens__content:hover {
+  background-color: #6f76c8;
+  cursor: pointer;
+}
+
 .grid__itens .grid__itens__content .flex {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -248,9 +253,9 @@ body {
   cursor: pointer;
 }
 
-.grid__itens .grid__itens__content:hover {
-  background-color: #6f76c8;
-  cursor: pointer;
+.grid__itens .grid__itens__content .flex img:hover {
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
 }
 
 .grid__itens .grid__itens__content .text--flex .big--text {

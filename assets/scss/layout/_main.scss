@@ -140,6 +140,11 @@
       background-color: $Dark-blue;
       border-radius: 14px;
 
+      &:hover{
+         background-color: $Desaturated-blue;
+         cursor: pointer;
+      }
+
       .flex{
          margin-bottom: 20px;
          display: flex;
@@ -154,12 +159,11 @@
 
          img{
             cursor: pointer;
-         }
-      }
 
-      &:hover{
-         background-color: $Desaturated-blue;
-         cursor: pointer;
+            &:hover{
+               filter: brightness(200%);
+            }
+         }
       }
 
       .text--flex{
@@ -192,22 +196,6 @@
       }
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .grid__content--orange{
    background-color: $Light-orange;
