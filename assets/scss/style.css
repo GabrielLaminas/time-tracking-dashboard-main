@@ -278,6 +278,12 @@ body {
   }
 }
 
+.grid__itens .grid__itens__content .text--flex {
+  position: relative;
+  -webkit-animation: show-left 0.5s linear forwards;
+          animation: show-left 0.5s linear forwards;
+}
+
 .grid__itens .grid__itens__content .text--flex .big--text {
   margin-bottom: 10px;
   color: #ffffff;
@@ -325,26 +331,62 @@ body {
 }
 
 .grid__content--orange {
-  background-color: #ff8c66;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #ff8c66), color-stop(10%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #ff8c66 35%, #1c1f4a 10%);
 }
 
 .grid__content--blue {
-  background-color: #56c2e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #56c2e6), color-stop(10%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #56c2e6 35%, #1c1f4a 10%);
 }
 
 .grid__content--red {
-  background-color: #ff5c7c;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #ff5c7c), color-stop(10%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #ff5c7c 35%, #1c1f4a 10%);
 }
 
 .grid__content--green {
-  background-color: #4acf81;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #4acf81), color-stop(10%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #4acf81 35%, #1c1f4a 10%);
 }
 
 .grid__content--purple {
-  background-color: #7536d3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #7536d3), color-stop(80%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #7536d3 35%, #1c1f4a 80%);
 }
 
 .grid__content--yellow {
-  background-color: #f1c65b;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #f1c65b), color-stop(10%, #1c1f4a));
+  background-image: linear-gradient(to bottom, #f1c65b 35%, #1c1f4a 10%);
+}
+
+@-webkit-keyframes show-left {
+  0% {
+    left: -40px;
+    opacity: 0;
+  }
+  80% {
+    left: -10px;
+    opacity: 0.8;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes show-left {
+  0% {
+    left: -40px;
+    opacity: 0;
+  }
+  80% {
+    left: -10px;
+    opacity: 0.8;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

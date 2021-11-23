@@ -178,11 +178,13 @@
       }
 
       .text--flex{
+         position: relative;
+         animation: show-left 0.5s linear forwards;
 
          .big--text{
             margin-bottom: 10px;
             color: $white;
-            font-size: 2.75em; //2.5
+            font-size: 2.75em;
             font-weight: 300;
 
             @include mobile{
@@ -196,8 +198,7 @@
          
          .small--text{
             color: $Pale-Blue;
-            font-size: 0.8125em; //13
-            //font-size: 0.875em;
+            font-size: 0.8125em;
             font-weight: 400;
          }
 
@@ -215,25 +216,59 @@
 }
 
 .grid__content--orange{
-   background-color: $Light-orange;
+   background-image: linear-gradient(
+      to bottom,
+      $Light-orange 35%, 
+      $Dark-blue 10%);
 }
 
 .grid__content--blue{
-   background-color: $Soft-blue;
+   background-image: linear-gradient(
+      to bottom,
+      $Soft-blue 35%, 
+      $Dark-blue 10%);
 }
 
 .grid__content--red{
-   background-color: $Light-red;
+   background-image: linear-gradient(
+      to bottom,
+      $Light-red 35%, 
+      $Dark-blue 10%);
+   
 }
 
 .grid__content--green{
-   background-color: $Lime-green;
+   background-image: linear-gradient(
+      to bottom,
+      $Lime-green 35%, 
+      $Dark-blue 10%);
 }
 
 .grid__content--purple{
-   background-color: $Violet;
+   background-image: linear-gradient(
+      to bottom,
+      $Violet 35%, 
+      $Dark-blue 80%);
 }
 
 .grid__content--yellow{
-   background-color: $Soft-yellow;
+   background-image: linear-gradient(
+      to bottom,
+      $Soft-yellow 35%, 
+      $Dark-blue 10%);
+}
+
+@keyframes show-left {
+   0%{
+      left: -40px;
+      opacity: 0;
+   }
+   80%{
+      left: -10px;
+      opacity: 0.8;
+   }
+   100%{
+      left: 0;
+      opacity: 1;
+   }
 }
