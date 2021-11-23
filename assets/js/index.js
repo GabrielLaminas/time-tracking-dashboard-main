@@ -3,28 +3,28 @@ const linkA = document.querySelectorAll('.grid__link a');
 
 const hours = document.querySelectorAll('.hours');
 const times = document.querySelectorAll('.time')
-const previus = document.querySelectorAll('.previus');
+const past = document.querySelectorAll('.previous');
 
-async function getData() {
-   const dadoResponse = await fetch('/data.json');
-   const dadosJson = await dadoResponse.json();
-   return dadosJson;
+async function initFetch() {
+   const dataResponse = await fetch('/data.json');
+   const dataJson = await dataResponse.json();
+   return dataJson;
 }
 
 async function initData() {
-   const jsondata = await getData();
+   const jsondata = await initFetch();
    linkA[1].classList.toggle('active');
 
    for (let i in jsondata) {
       const { current, previous } = jsondata[i]["timeframes"]["weekly"];
       hours[i].innerText = current;
       times[i].innerText = previous;
-      previus[i].innerText = 'Last Week';
+      past[i].innerText = 'Last Week';
    }
 }
 initData();
 
-async function getDataFilter(e) {
+async function getData(e) {
    linkA.forEach((a) => {
       a.classList.remove('active');
    });
@@ -33,7 +33,7 @@ async function getDataFilter(e) {
 
    try {
       const text = e.target.innerText.toLowerCase();
-      const dados = await getData();
+      const dados = await initFetch();
 
       for (let i in dados) {
          const { current, previous } = dados[i]["timeframes"][text];
@@ -41,19 +41,19 @@ async function getDataFilter(e) {
          times[i].innerText = previous;
 
          if (text === 'daily') {
-            previus[i].innerText = 'Yesterday';
+            past[i].innerText = 'Yesterday';
          }
          if (text === 'weekly') {
-            previus[i].innerText = 'Last Week';
+            past[i].innerText = 'Last Week';
          }
          if (text === 'monthly') {
-            previus[i].innerText = 'Last Month';
+            past[i].innerText = 'Last Month';
          }
       }
-   } 
+   }
    catch (erro) {
       console.log(erro);
    }
 }
 
-links.addEventListener('click', getDataFilter);
+links.addEventListener('click', getData);
