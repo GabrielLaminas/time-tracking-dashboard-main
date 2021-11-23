@@ -81,11 +81,16 @@
 
 .grid__link{
    padding: 20px 25px 30px 25px;
+   pointer-events: none;
+   position: relative;
 
    a{
       display: block;
       color: $Desaturated-blue;
       font-size: 1em;
+      pointer-events: painted;
+      position: relative;
+      z-index: 2;
 
       & + a{
          margin-top: 15px;
