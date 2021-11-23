@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   transition: all 0.3s;
 }
 
 a{
@@ -10,15 +11,17 @@ a{
 
 body{
    min-height: 100vh;
-   margin: 5px 10px;
+   margin: 0 10px;
    display: flex;
    align-items: center;
    justify-content: center;
 
    background-color: $Very-dark-blue;
-   background-color: whitesmoke;
    font-family: $font-family-rubik;
 
+   @include tablet{
+      margin: 10px;
+   }
    @include mobile{
       margin: 40px 20px;
    }

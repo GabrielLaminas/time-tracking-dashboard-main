@@ -4,6 +4,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 a {
@@ -12,7 +14,7 @@ a {
 
 body {
   min-height: 100vh;
-  margin: 5px 10px;
+  margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,8 +25,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #0f1424;
-  background-color: whitesmoke;
   font-family: "Rubik", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -45,7 +52,7 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-areas: "aside content content  content" "aside content content  content";
-  gap: 24px;
+  gap: 22px;
 }
 
 @media screen and (max-width: 768px) {
@@ -53,6 +60,7 @@ body {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "aside   content  content" "aside   content  content" "aside   content  content";
+    gap: 20px;
   }
 }
 
@@ -77,7 +85,8 @@ body {
 @media screen and (max-width: 768px) {
   .aside {
     -ms-flex-item-align: start;
-        align-self: flex-start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
 }
 
@@ -146,7 +155,7 @@ body {
 }
 
 .grid__link {
-  padding: 20px 25px 30px 25px;
+  padding: 20px 25px 25px 25px;
   pointer-events: none;
   position: relative;
 }
@@ -231,7 +240,7 @@ body {
 }
 
 .grid__itens .grid__itens__content:hover {
-  background-color: #6f76c8;
+  background-color: #303782;
   cursor: pointer;
 }
 
@@ -263,15 +272,22 @@ body {
           filter: brightness(200%);
 }
 
+@media screen and (max-width: 576px) {
+  .grid__itens .grid__itens__content .flex {
+    margin-bottom: 10px;
+  }
+}
+
 .grid__itens .grid__itens__content .text--flex .big--text {
   margin-bottom: 10px;
   color: #ffffff;
-  font-size: 2.5em;
+  font-size: 2.75em;
   font-weight: 300;
 }
 
 @media screen and (max-width: 576px) {
   .grid__itens .grid__itens__content .text--flex .big--text {
+    margin-bottom: 0;
     font-size: 2em;
   }
 }
@@ -284,7 +300,7 @@ body {
 
 .grid__itens .grid__itens__content .text--flex .small--text {
   color: #bdc1ff;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   font-weight: 400;
 }
 
@@ -299,6 +315,12 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid__itens .grid__itens__content {
+    padding: 20px;
   }
 }
 

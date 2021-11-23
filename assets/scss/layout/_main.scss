@@ -3,13 +3,14 @@
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-areas: "aside content content  content"
                         "aside content content  content";
-   gap: 24px;
+   gap: 22px;
 
    @include tablet{
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "aside   content  content"
                            "aside   content  content"
                            "aside   content  content";
+      gap: 20px;
    }
    @include mobile{
       grid-template-columns: minmax(200px, 576px);
@@ -25,13 +26,13 @@
    border-radius: 14px;
 
    @include tablet{
-      align-self: flex-start;
+      align-self: start;
    }
 }
 
 .grid__user__box{
    padding: 20px 25px 70px 25px;
-   background-color: $Dark-purple;
+   background-color: $Blue;
    border-bottom-left-radius: 16px;
    border-bottom-right-radius: 16px;
 
@@ -80,7 +81,7 @@
 }
 
 .grid__link{
-   padding: 20px 25px 30px 25px;
+   padding: 20px 25px 25px 25px;
    pointer-events: none;
    position: relative;
 
@@ -99,6 +100,7 @@
             margin-top: 0;
          }
       }
+
       &:hover{
          color: $white;
       }
@@ -146,7 +148,7 @@
       border-radius: 14px;
 
       &:hover{
-         background-color: $Desaturated-blue;
+         background-color:#303782;
          cursor: pointer;
       }
 
@@ -169,6 +171,10 @@
                filter: brightness(200%);
             }
          }
+
+         @include mobile{
+            margin-bottom: 10px;
+         }
       }
 
       .text--flex{
@@ -176,10 +182,11 @@
          .big--text{
             margin-bottom: 10px;
             color: $white;
-            font-size: 2.5em;
+            font-size: 2.75em; //2.5
             font-weight: 300;
 
             @include mobile{
+               margin-bottom: 0;
                font-size: 2em;
             }
             @include mobile-small{
@@ -189,7 +196,8 @@
          
          .small--text{
             color: $Pale-Blue;
-            font-size: 0.875em;
+            font-size: 0.8125em; //13
+            //font-size: 0.875em;
             font-weight: 400;
          }
 
@@ -198,6 +206,10 @@
             align-items: center;
             justify-content: space-between;
          }
+      }
+
+      @include tablet{
+         padding: 20px;
       }
    }
 }
