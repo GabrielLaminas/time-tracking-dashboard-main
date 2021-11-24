@@ -25,13 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](https://github.com/GabrielLaminas/huddle-landing-page-master/blob/main/assets/final-project-time-tracking-dashboard/GenericLaptop ?raw=true)
+![Desktop](https://github.com/GabrielLaminas/time-tracking-dashboard-main/blob/main/assets/final-project-time-tracking-dashboard/GenericLaptop.jpg?raw=true)
 
-![Mobile](https://github.com/GabrielLaminas/huddle-landing-page-master/blob/main/assets/final-project-time-tracking-dashboard/iPhoneX?raw=true)
+![Mobile](https://github.com/GabrielLaminas/time-tracking-dashboard-main/blob/main/assets/final-project-time-tracking-dashboard/iPhoneX.jpg?raw=true)
 
 ### Links
 
-- Live Site URL: [Time tracking dashboard](https://your-live-site-url.com)
+- Live Site URL: [Time tracking dashboard](https://gabriellaminas.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
