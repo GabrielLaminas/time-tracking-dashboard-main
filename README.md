@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Time tracking dashboard](https://your-live-site-url.com)
+- Live Site URL: [Time tracking dashboard](https://gabriellaminas.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
