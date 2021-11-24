@@ -6,12 +6,7 @@ const times = document.querySelectorAll('.time')
 const past = document.querySelectorAll('.previous');
 
 async function initFetch() {
-   const dataResponse = await fetch('/data.json', {
-      headers: {
-         'Content-Type': 'application/json',
-         'Accept': 'application/json'
-      }
-   });
+   const dataResponse = await fetch('https://raw.githubusercontent.com/GabrielLaminas/time-tracking-dashboard-main/main/data.json');
    const dataJson = await dataResponse.json();
    return dataJson;
 }
