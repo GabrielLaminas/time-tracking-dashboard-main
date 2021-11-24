@@ -121,15 +121,15 @@ body {
   font-size: 0.75em;
 }
 
-.grid__user__box .grid__user__text p {
+.grid__user__box .grid__user__text h1 {
   max-width: 200px;
   color: #ffffff;
-  font-size: 2em;
+  font-size: 2.375em;
   font-weight: 300;
 }
 
 @media screen and (max-width: 576px) {
-  .grid__user__box .grid__user__text p {
+  .grid__user__box .grid__user__text h1 {
     max-width: 300px;
     font-size: 1.75em;
   }
@@ -138,6 +138,12 @@ body {
 @media screen and (max-width: 576px) {
   .grid__user__box .grid__user__text {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid__user__box {
+    padding: 20px 20px 60px 20px;
   }
 }
 
@@ -199,6 +205,12 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .grid__link {
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .grid__link {
     display: -webkit-box;
@@ -257,7 +269,7 @@ body {
           justify-content: space-between;
 }
 
-.grid__itens .grid__itens__content .flex p {
+.grid__itens .grid__itens__content .flex h2 {
   color: #ffffff;
   font-size: 1.125em;
   font-weight: 400;
@@ -367,7 +379,7 @@ body {
   }
   80% {
     left: -10px;
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     left: 0;
@@ -382,7 +394,7 @@ body {
   }
   80% {
     left: -10px;
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     left: 0;
