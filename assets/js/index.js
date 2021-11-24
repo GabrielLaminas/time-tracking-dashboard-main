@@ -6,7 +6,12 @@ const times = document.querySelectorAll('.time')
 const past = document.querySelectorAll('.previous');
 
 async function initFetch() {
-   const dataResponse = await fetch('data.json');
+   const dataResponse = await fetch('/data.json', {
+      headers: {
+         'Content-Type': 'application/json',
+         'Accept': 'application/json'
+      }
+   });
    const dataJson = await dataResponse.json();
    return dataJson;
 }
